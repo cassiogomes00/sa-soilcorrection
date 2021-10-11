@@ -1,0 +1,45 @@
+@startuml
+class edu.utfpr.cp.dacom.sa.soilcorrection.MainClass
+class edu.utfpr.cp.dacom.sa.soilcorrection.EquilibrioCorrecaoCTC.EquilibrioCorrecaoCTC
+class edu.utfpr.cp.dacom.sa.soilcorrection.conversores.ConverteCMolcDm3EmMgDm3
+class edu.utfpr.cp.dacom.sa.soilcorrection.conversores.ConverteKgHaEmK2O
+class edu.utfpr.cp.dacom.sa.soilcorrection.conversores.ConverteKgHaEmP2O5
+class edu.utfpr.cp.dacom.sa.soilcorrection.conversores.ConverteMgDm3EmKgHa
+class edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.Correcao.CorrecaoCalcioMagnesio
+class edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.Correcao.CorrecaoFosforo
+class edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.Correcao.CorrecaoPotassio
+class edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.NutrienteAdicional
+enum edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.FonteCalcioMagnesio
+enum edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.FonteFosforo
+enum edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.FontePotassio
+enum edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.NomeNutrienteAdicional
+enum edu.utfpr.cp.dacom.sa.soilcorrection.nutrienteTextura.TexturaSolo
+interface edu.utfpr.cp.dacom.sa.soilcorrection.conversores.Conversao
+interface edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.Correcao.ICorrecaoNutriente
+interface edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.Correcao.ICorrecaoNutrienteQuantidadeAplicar
+interface edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.IFonteNutriente
+edu.utfpr.cp.dacom.sa.soilcorrection.conversores.ConverteCMolcDm3EmMgDm3 --|> edu.utfpr.cp.dacom.sa.soilcorrection.conversores.Conversao
+edu.utfpr.cp.dacom.sa.soilcorrection.conversores.ConverteKgHaEmK2O --|> edu.utfpr.cp.dacom.sa.soilcorrection.conversores.Conversao
+edu.utfpr.cp.dacom.sa.soilcorrection.conversores.ConverteKgHaEmP2O5 --|> edu.utfpr.cp.dacom.sa.soilcorrection.conversores.Conversao
+edu.utfpr.cp.dacom.sa.soilcorrection.conversores.ConverteMgDm3EmKgHa --|> edu.utfpr.cp.dacom.sa.soilcorrection.conversores.Conversao
+edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.Correcao.CorrecaoCalcioMagnesio ..> edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.FonteCalcioMagnesio
+edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.Correcao.CorrecaoCalcioMagnesio --|> edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.Correcao.ICorrecaoNutriente
+edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.Correcao.CorrecaoFosforo ..> edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.FonteFosforo
+edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.Correcao.CorrecaoFosforo --|> edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.Correcao.ICorrecaoNutriente
+edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.Correcao.CorrecaoFosforo --|> edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.Correcao.ICorrecaoNutrienteQuantidadeAplicar
+edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.Correcao.CorrecaoPotassio ..> edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.FontePotassio
+edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.Correcao.CorrecaoPotassio --|> edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.Correcao.ICorrecaoNutriente
+edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.Correcao.CorrecaoPotassio --|> edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.Correcao.ICorrecaoNutrienteQuantidadeAplicar
+edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.FonteCalcioMagnesio ..> edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.NutrienteAdicional
+edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.FonteCalcioMagnesio ..> edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.NomeNutrienteAdicional
+edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.FonteCalcioMagnesio --|> edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.IFonteNutriente
+edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.FonteFosforo ..> edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.NutrienteAdicional
+edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.FonteFosforo ..> edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.NomeNutrienteAdicional
+edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.FonteFosforo --|> edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.IFonteNutriente
+edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.FontePotassio ..> edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.NutrienteAdicional
+edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.FontePotassio ..> edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.NomeNutrienteAdicional
+edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.FontePotassio --|> edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.IFonteNutriente
+edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.Correcao.ICorrecaoNutriente ..> edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.NutrienteAdicional
+edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.Correcao.ICorrecaoNutriente ..> edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.IFonteNutriente
+edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.Correcao.ICorrecaoNutrienteQuantidadeAplicar ..> edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.IFonteNutriente
+@enduml
