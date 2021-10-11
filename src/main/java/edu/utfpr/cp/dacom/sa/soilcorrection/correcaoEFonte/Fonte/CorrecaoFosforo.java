@@ -1,4 +1,6 @@
-package edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte;
+package edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte;
+
+import edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.FonteFosforo;
 
 public class CorrecaoFosforo
         implements
