@@ -7,12 +7,13 @@ import lombok.Setter;
 @RequiredArgsConstructor
 public class NutrienteAdicional {
 
-    private final NomeNutrienteAdicional nome;
+  private final NomeNutrienteAdicional nome;
 
-    @Getter
-    private final double teorNutriente;
+  @Getter
+  private final double teorNutriente;
 
-    @Getter @Setter
-    private double correcaoAdicional;
-    
+  @Getter
+  @Setter
+  private double correcaoAdicional;
+
 }
