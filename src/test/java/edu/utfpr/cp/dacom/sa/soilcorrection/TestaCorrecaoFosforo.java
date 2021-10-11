@@ -1,5 +1,7 @@
 package edu.utfpr.cp.dacom.sa.soilcorrection;
 
+import edu.utfpr.cp.dacom.sa.soilcorrection.conversores.ConverteKgHaEmP2O5;
+import edu.utfpr.cp.dacom.sa.soilcorrection.conversores.ConverteMgDm3EmKgHa;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
