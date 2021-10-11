@@ -1,4 +1,4 @@
-package edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte;
+package edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.Correcao;
 
 import edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.IFonteNutriente;
 import edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.NutrienteAdicional;
