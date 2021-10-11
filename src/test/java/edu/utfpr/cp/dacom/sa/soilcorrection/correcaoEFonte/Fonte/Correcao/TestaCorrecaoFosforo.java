@@ -1,9 +1,9 @@
-package edu.utfpr.cp.dacom.sa.soilcorrection;
+package edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.Correcao;
 
-import edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.FonteFosforo;
-import edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.Correcao.CorrecaoFosforo;
 import edu.utfpr.cp.dacom.sa.soilcorrection.conversores.ConverteKgHaEmP2O5;
 import edu.utfpr.cp.dacom.sa.soilcorrection.conversores.ConverteMgDm3EmKgHa;
+import edu.utfpr.cp.dacom.sa.soilcorrection.correcaoEFonte.Fonte.FonteFosforo;
+import lombok.var;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
